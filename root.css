@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/*root default styles*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-light-white: #ddd;
+  --color-pure-black: #000000;
+  --color-light-gray: #282828;
+  --color-light-black: #4d4d4d;
+  --color-dark-white: #fdfdfd;
+  --color-gray-3: #dbd7d7;
+  --color-gray-2: #646464;
+  --color-dark-gray: rgba(0, 0, 0, 0.38);
+  --color-dark-yellow: #fdcf01;
+  --color-light-pink: #ffd9d9;
+  --bg-linear-gradient: linear-gradient(
+    204deg,
+    #fff 15.46%,
+    rgba(217, 217, 217, 0.56) 118.36%
+  );
+  /*Font Family and Font Size */
+  --font-family-roboto: "Roboto", sans-serif;
+  --font-size-50: 50px;
+  --font-size-24: 24px;
+  --font-size-20: 20px;
+  --font-size-18: 18px;
+  --font-size-16: 16px;
+  --font-size-14: 14px;
+}
+
+body {
+  font-family: var(--font-family-roboto) !important;
+}
+
+/* Define classes using variables */
+
+.color-white {
+  color: var(--color-white);
+}
+
+.color-light-white {
+  color: var(--color-light-white);
+}
+
+.color-pure-black {
+  color: var(--color-pure-black);
+}
+
+.color-light-gray {
+  color: var(--color-light-gray);
+}
+
+.color-light-black {
+  color: var(--color-light-black);
+}
+
+.color-dark-white {
+  color: var(--color-dark-white);
+}
+
+.color-gray-2 {
+  color: var(--color-gray-2);
+}
+
+.color-dark-gray {
+  color: var(--color-dark-gray);
+}
+
+.color-dark-yellow {
+  color: var(--color-dark-yellow);
+}
+
+.color-light-pink {
+  color: var(--color-light-pink);
+}
+
+.bg-linear-gradient {
+  background: var(--bg-linear-gradient);
+}
+
+/* Background color classes */
+.bg-color-white {
+  background-color: var(--color-white);
+}
+
+.bg-color-light-white {
+  background-color: var(--color-light-white);
+}
+
+.bg-color-pure-black {
+  background-color: var(--color-pure-black);
+}
+
+.bg-color-light-gray {
+  background-color: var(--color-light-gray);
+}
+
+.bg-color-light-black {
+  background-color: var(--color-light-black);
+}
+
+.bg-color-dark-white {
+  background-color: var(--color-dark-white);
+}
+
+.bg-color-gray-2 {
+  background-color: var(--color-gray-2);
+}
+
+.bg-color-gray-3 {
+  background-color: var(--color-gray-3);
+}
+
+.bg-color-dark-gray {
+  background-color: var(--color-dark-gray);
+}
+
+.bg-color-dark-yellow {
+  background-color: var(--color-dark-yellow);
+}
+
+.bg-color-light-pink {
+  background-color: var(--color-light-pink);
+}
+
+.font-family-roboto {
+  font-family: var(--font-family-roboto);
+}
+
+.font-size-50 {
+  font-size: var(--font-size-50);
+}
+
+.font-size-24 {
+  font-size: var(--font-size-24);
+}
+
+.font-size-20 {
+  font-size: var(--font-size-20);
+}
+
+.font-size-18 {
+  font-size: var(--font-size-18);
+}
+
+.font-size-16 {
+  font-size: var(--font-size-16);
+}
+
+.font-size-14 {
+  font-size: var(--font-size-14);
+}
+
+.sidemenu:hover,
+.sidemenu:focus,
+.sidemenu:active {
+  background: var(--color-light-gray);
+  color: var(--color-dark-yellow);
+}

@@ -1,0 +1,33 @@
+.custom-input-end-radius {
+  border-start-end-radius: 0.75rem;
+  border-end-end-radius: 0.75rem;
+}
+input[type="checkbox"]:checked {
+  color: black; /* Change the background color when checked */
+  border-color: yellow; /* Change the border color when checked */
+}
+.resizable-sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 23%;
+  height: 78.2vh;
+  background-color: rgb(217, 217, 217);
+  overflow: hidden;
+}
+.resizable-sidebar .resizer {
+  width: 5px;
+  height: 100%;
+  background-color: #d1d5db;
+  cursor: ew-resize;
+  position: absolute;
+  top: 0;
+  left: -2.5px;
+}
+.grid-container {
+  transition: margin-right 0.3s;
+}
+tbody td {
+  border: none;
+}

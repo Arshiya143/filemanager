@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sizaf</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@2.x/dist/alpine.min.js"
+      defer
+    ></script>
+    <link href="root.css" rel="stylesheet" />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <div
+      class="md:flex flex-col md:flex-row flex-grow w-full"
+      x-data="{ open: false, selected: 'position', submenuOpen: false, subsubmenuOpen: false }"
+    >
+      <div
+        @click.away="open = false"
+        class="flex flex-col w-full md:w-72 flex-shrink-0"
+        style="background: url('images/sidebarbg.png')"
+      >
+        <div
+          class="flex-shrink-0 px-12 py-6 flex flex-row items-center justify-between"
+        >
+          <a
+            href="#"
+            class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
+          >
+            <img
+              class="h-20 w-24 md:w-20 md:h-20"
+              src="images/logo.png"
+              alt="image description"
+            />
+          </a>
+          <button
+            class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline"
+            @click="open = !open"
+          >
+            <i x-show="!open" class="ri-menu-line"></i>
+            <i x-show="open" class="ri-close-line"></i>
+          </button>
+        </div>
+        <nav
+          :class="{ 'block': open, 'hidden': !open }"
+          class="flex-grow md:block pt-2 md:pb-0 md:overflow-y-auto"
+        >
+          <a
+            @click="selected = 'position'; submenuOpen = !submenuOpen; changeIframeSrc('position.html')"
+            class="block px-8 py-2 sidemenu rounded-r-lg flex justify-between items-center font-size-16 font-normal"
+            href="#"
+          >
+            <span>Position</span>
+            <i
+              :class="{'ri-arrow-down-s-line': submenuOpen, 'ri-arrow-right-s-line': !submenuOpen}"
+              class="text-3xl color-dark-yellow"
+            ></i>
+          </a>
+          <!-- Submenu -->
+          <div x-show="submenuOpen" class="bg-color-gray-3">
+            <a
+              @click="subsubmenuOpen = !subsubmenuOpen"
+              class="block px-8 py-2 sidemenu rounded-r-lg flex justify-between items-center font-normal"
+              href="#"
+            >
+              <span>Starred</span>
+              <i
+                :class="{'ri-arrow-down-s-line': subsubmenuOpen, 'ri-arrow-right-s-line': !subsubmenuOpen}"
+                class="text-xl color-dark-yellow"
+              ></i>
+            </a>
+            <!-- Sub-submenu -->
+            <div x-show="subsubmenuOpen" class="bg-gray-400">
+              <a
+                class="block px-8 py-2 sidemenu rounded-r-lg flex justify-between items-center font-normal"
+                href="#"
+              >
+                <span>Sub-submenu 1</span>
+                <i class="ri-arrow-right-s-line text-xl color-dark-yellow"></i>
+              </a>
+              <a
+                class="block px-8 py-2 sidemenu rounded-r-lg flex justify-between items-center font-normal"
+                href="#"
+              >
+                <span>Sub-submenu 2</span>
+                <i class="ri-arrow-right-s-line text-xl color-dark-yellow"></i>
+              </a>
+            </div>
+            <a
+              class="block px-8 py-2 sidemenu rounded-r-lg flex justify-between items-center font-normal"
+              href="#"
+            >
+              <span>Personal</span>
+              <i class="ri-arrow-right-s-line text-xl color-dark-yellow"></i>
+            </a>
+            <a
+              class="block px-8 py-2 sidemenu rounded-r-lg flex justify-between items-center font-normal"
+              href="#"
+            >
+              <span>Group</span>
+              <i class="ri-arrow-right-s-line text-xl color-dark-yellow"></i>
+            </a>
+            <a
+              class="block px-8 py-2 sidemenu rounded-r-lg flex justify-between items-center font-normal"
+              href="#"
+            >
+              <span>Collaborate with me</span>
+              <i class="ri-arrow-right-s-line text-xl color-dark-yellow"></i>
+            </a>
+          </div>
+
+          <a
+            @click="selected = 'tools'; changeIframeSrc('tools.html')"
+            class="block px-8 py-2 sidemenu rounded-r-lg flex justify-between items-center font-size-16 font-normal"
+            href="#"
+          >
+            <span>Tools</span>
+            <i class="ri-arrow-right-s-line text-3xl color-dark-yellow"></i>
+          </a>
+          <a
+            @click="selected = 'fileType'; changeIframeSrc('fileType.html')"
+            class="block px-8 py-2 sidemenu rounded-r-lg flex justify-between items-center font-size-16 font-normal"
+            href="#"
+          >
+            <span>File Type</span>
+            <i class="ri-arrow-right-s-line text-3xl color-dark-yellow"></i>
+          </a>
+          <a
+            @click="selected = 'tags'; changeIframeSrc('tags.html')"
+            class="block px-8 py-2 sidemenu rounded-r-lg flex justify-between items-center font-size-16 font-normal"
+            href="#"
+          >
+            <span>Tags</span>
+            <i class="ri-arrow-right-s-line text-3xl color-dark-yellow"></i>
+          </a>
+          <a
+            @click="selected = 'networkDriver'; changeIframeSrc('networkDriver.html')"
+            class="block px-8 py-2 sidemenu rounded-r-lg flex justify-between items-center font-size-16 font-normal"
+            href="#"
+          >
+            <span>Network Driver</span>
+            <i class="ri-arrow-right-s-line text-3xl color-dark-yellow"></i>
+          </a>
+        </nav>
+      </div>
+      <div class="flex-grow bg-gray-100">
+        <iframe
+          id="content-iframe"
+          class="w-full h-screen"
+          src="position.html"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script>
+      function changeIframeSrc(src) {
+        document.getElementById("content-iframe").src = src;
+      }
+    </script>
+  </body>
+</html>
