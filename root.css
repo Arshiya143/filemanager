@@ -11,15 +11,19 @@
 :root {
   --color-white: #ffffff;
   --color-light-white: #ddd;
+  --color-light-white2: #fdfdfd;
   --color-pure-black: #000000;
   --color-light-gray: #282828;
   --color-light-black: #4d4d4d;
+  --color-light-black2: #686868;
   --color-dark-white: #fdfdfd;
   --color-gray-3: #dbd7d7;
+  --color-gray-4: #1f2937;
   --color-gray-2: #646464;
   --color-dark-gray: rgba(0, 0, 0, 0.38);
   --color-dark-yellow: #fdcf01;
   --color-light-pink: #ffd9d9;
+  --color-light-blue: #93c5fd;
   --bg-linear-gradient: linear-gradient(
     204deg,
     #fff 15.46%,
@@ -94,6 +98,10 @@ body {
   background-color: var(--color-light-white);
 }
 
+.bg-color-light-white2 {
+  background-color: var(--color-light-white2);
+}
+
 .bg-color-pure-black {
   background-color: var(--color-pure-black);
 }
@@ -104,6 +112,9 @@ body {
 
 .bg-color-light-black {
   background-color: var(--color-light-black);
+}
+.bg-color-light-black2 {
+  background-color: var(--color-light-black2);
 }
 
 .bg-color-dark-white {
@@ -117,6 +128,15 @@ body {
 .bg-color-gray-3 {
   background-color: var(--color-gray-3);
 }
+.bg-color-gray-4 {
+  background-color: var(--color-gray-4);
+}
+.border-color-gray-3 {
+  border-color: var(--color-gray-3);
+}
+.border-color-light-black {
+  border-color: var(--color-light-black2);
+}
 
 .bg-color-dark-gray {
   background-color: var(--color-dark-gray);
@@ -128,6 +148,10 @@ body {
 
 .bg-color-light-pink {
   background-color: var(--color-light-pink);
+}
+
+.bg-color-light-blue {
+  background-color: var(--color-light-blue);
 }
 
 .font-family-roboto {
